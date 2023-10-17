@@ -1,8 +1,23 @@
 # Pinhin Ionic Project
 Projects to help pinhita to understand Ionic.
 
+## Goal
+1. Create a Login page.
+2. Create a Home page.
+3. Create router to Login and Home.
+4. Create AuthData service to handle the "user data" that we get in the Login.
+5. Create Guard to block acces to Home if you're not logged.
+6. Create a DataProvider service to get the json of the API [Rick & Morty](https://rickandmortyapi.com/documentation/#rest).
+7. Each time the user enters to the Home, needs to trigger the DataProveider service to get the data, when the data is downloaded need to be stored in cache.
+8. Each time the user enters to the Home, needs to validate if the DataProvider has a cache of the data to load it or trigger the get.
+9. Once the DAtaProvider has the data in the cache, you need to display it in the mainmenu in a grid using Card elements.
+
 ## Some Commands
-``ionic serve`` start app.
+- `npm install` install all the node modules.
+- `ionic serve` start app.
+- `ionic generate page pages/page-name --no-spec` to generate a page without spec file.
+- `ionic generate service services/service-name/service-name` to generate a service file.
+
 
 ## Summary of Ionic Elements
 - **Page**:
