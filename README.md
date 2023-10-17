@@ -17,6 +17,7 @@ Projects to help pinhita to understand Ionic.
 - `ionic serve` start app.
 - `ionic generate page pages/page-name --no-spec` to generate a page without spec file.
 - `ionic generate service services/service-name/service-name` to generate a service file.
+- `ionic generate guard guards/guard-name` to generate a guard file
 
 
 ## Summary of Ionic Elements

@@ -12,7 +12,7 @@ export class AuthHandlerService {
     }
 
     setNickname( nickname:string ): boolean{
-        if ( nickname === null || nickname === undefined || nickname.length <= 0 ) return false;
+        if ( !this.isNicknameValid( nickname ) ) return false;
 
         this._nickname = nickname;
         return true;
@@ -20,5 +20,9 @@ export class AuthHandlerService {
 
     getNickname(): string {
         return this._nickname;
+    }
+
+    isNicknameValid( nickname:string ) : boolean {
+        return nickname !== null && nickname !== undefined && nickname.length > 0;
     }
 }

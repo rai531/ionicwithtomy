@@ -21,5 +21,4 @@ export class LoginPage implements OnInit {
 
         this.navCtrl.navigateRoot( 'home' );
     }
-
 }
