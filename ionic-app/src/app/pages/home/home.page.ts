@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { DataProviderService } from 'src/app/services/data-provider/data-provider.service';
 
 @Component( {
     selector: 'app-home',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
     } )
 export class HomePage {
 
-    constructor() {}
+    data: Array<any> = new Array<any>();
 
+    constructor( private dataProvider: DataProviderService ) {}
+
+    ngOnInit(){
+        this.dataProvider.fetchAPI();
+
+        this.dataProvider.Data.subscribe( ( data ) => {
+            this.data = data;
+        } );
+    }
 }

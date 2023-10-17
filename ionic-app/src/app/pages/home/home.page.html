@@ -8,6 +8,16 @@
   </ion-header>
 
   <div id="container">
-    SADF ASDF ASDF
+    <ion-card *ngFor="let characterInfo of data">
+        <img alt="Silhouette of mountains" [src]="characterInfo.image" />
+        <ion-card-header>
+          <ion-card-title>{{ characterInfo.name }}</ion-card-title>
+          <ion-card-subtitle>{{ characterInfo.species }}</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Status: {{ characterInfo.status }}
+        </ion-card-content>
+      </ion-card>
   </div>
 </ion-content>
